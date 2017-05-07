@@ -21,8 +21,9 @@ class TicTacToe
     @board.input_to_position(@choice)
     @board.set_cell(@row, @col, player2.team)
   end
+  
 
-  puts "Game over"
+  
 
 end
 

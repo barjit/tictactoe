@@ -85,7 +85,8 @@ class Board
     else
       if cell1 == cell2
         if cell2 == cell3
-          true
+          true 
+          @winning_team = cell3
         end
       end
     end
@@ -93,27 +94,33 @@ class Board
 
   def game_over?
     if winning_line?((get_cell(0,0)), (get_cell(0,1)), (get_cell(0,2)))
+      puts "Game over, #{@winning_team} is the winner!"
       true
     elsif winning_line?((get_cell(1,0)), (get_cell(1,1)), (get_cell(1,2)))
+      puts "Game over, #{@winning_team} is the winner!"
       true
     elsif winning_line?((get_cell(2,0)), (get_cell(2,1)), (get_cell(2,2)))
+      puts "Game over, #{@winning_team} is the winner!"
       true
     elsif winning_line?((get_cell(0,0)), (get_cell(1,0)), (get_cell(2,0)))
+      puts "Game over, #{@winning_team} is the winner!"
       true
     elsif winning_line?((get_cell(0,1)), (get_cell(1,1)), (get_cell(2,1)))
+      puts "Game over, #{@winning_team} is the winner!"
       true
     elsif winning_line?((get_cell(0,2)), (get_cell(1,2)), (get_cell(2,2)))
+      puts "Game over, #{@winning_team} is the winner!"
       true
     elsif winning_line?((get_cell(0,0)), (get_cell(1,1)), (get_cell(2,2)))
+      puts "Game over, #{@winning_team} is the winner!"
       true
     elsif winning_line?((get_cell(2,0)), (get_cell(1,1)), (get_cell(0,2)))
+      puts "Game over, #{@winning_team} is the winner!"
       true
     else
       false
     end
   end
-
-
 
 end
 
