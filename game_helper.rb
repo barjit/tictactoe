@@ -24,7 +24,7 @@ class GameHelper
           when "O"
             break
           else
-            puts "Please select O or X"
+            puts "Please select 'O' or 'X' "
         end
       end
       @allocated_team = @team

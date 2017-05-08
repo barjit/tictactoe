@@ -23,11 +23,19 @@ class Board
     puts
   end
 
+  @@choices = []
+
   def get_input
     puts "Please select a square to place your piece (numbers 1 to 9)"
     @choice = gets.chomp
-    puts
-    puts
+    while @@choices.include? @choice
+      puts "please choose an empty square"
+      @choice = gets.chomp
+    end
+    @@choices << @choice
+    @choice
+    puts 
+    puts 
   end
 
   def input_to_position(choice)
@@ -72,7 +80,7 @@ class Board
   end
 
   def set_cell(row, col, value)
-    @gameboard[@row][@col] = value
+   @gameboard[@row][@col] = value
   end
 
   def get_cell(row, col)
@@ -123,32 +131,6 @@ class Board
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
