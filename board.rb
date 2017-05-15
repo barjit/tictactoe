@@ -1,4 +1,6 @@
 class Board
+
+  require_relative 'game_helper'
   
   attr_accessor :gameboard
 
@@ -38,8 +40,9 @@ class Board
     puts 
   end
 
-  def input_to_position(choice)
 
+
+  def input_to_position(choice)
     case @choice
       when "1"
         @row = 0
@@ -75,6 +78,10 @@ class Board
       when "9"
         @row = 2
         @col = 2
+
+      else
+        puts "please choose a valid number"
+        get_input
 
     end 
   end
@@ -129,6 +136,8 @@ class Board
       false
     end
   end
+
+
 
 end
 

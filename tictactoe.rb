@@ -1,4 +1,4 @@
-class TicTacToe
+
   
   require_relative 'board'
   require_relative 'player'
@@ -21,11 +21,7 @@ class TicTacToe
     @board.input_to_position(@choice)
     @board.set_cell(@row, @col, player2.team)
   end
-  
 
-  
-
-end
 
 
 
